@@ -1,0 +1,175 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background 0.5s ease;
+}
+
+h2 {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+}
+
+.datetime {
+    color: white;
+    background: #10101E;
+    opacity: 0.9;
+    font-family: sans-serif;
+    width: 400px;
+    padding: 15px 10px;
+    border: 3px solid #2E94E3;
+    border-radius: 5px;
+
+}
+
+.date {
+    font-size: 20px;
+    font-weight: 600px;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.clock {
+    display: flex;
+}
+
+.clock div {
+    margin: 5px;
+    position: relative;
+}
+
+.clock span {
+    width: 100px;
+    height: 80px;
+    opacity: 0.8;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.clock .text {
+    height: 30px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+
+.clock #ampm {
+    bottom: 0;
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    font-size: 20px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1020px) {
+    .datetime {
+        width: 300px; /* Mengatur agar lebih persegi */
+        max-width: 300px; /* Membatasi lebar maksimal */
+    }
+
+    .clock span {
+        width: 70px;
+        height: 60px;
+        font-size: 35px; /* Menjaga ukuran yang proporsional */
+    }
+
+    .clock .text {
+        font-size: 8px;
+    }
+
+    .date {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .datetime {
+        width: 250px;
+        max-width: 250px;
+    }
+
+    .clock span {
+        width: 60px;
+        height: 50px;
+        font-size: 30px;
+    }
+
+    .date {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 12px;
+    }
+
+    .datetime {
+        width: 200px;
+        max-width: 200px;
+        padding: 8px;
+        border-width: 2px;
+    }
+
+    .clock {
+        position: relative;
+        justify-content: center;
+    }
+
+    .clock span {
+        width: 50px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .clock .text {
+        font-size: 6px;
+    }
+
+    .date {
+        font-size: 14px;
+    }
+
+    .clock #ampm {
+        display: none; 
+    }
+}
+
+@media (max-width: 360px) {
+    .datetime {
+        width: 180px;
+        max-width: 180px;
+        padding: 5px;
+    }
+
+    .clock span {
+        width: 45px;
+        height: 35px;
+        font-size: 18px;
+    }
+
+    .clock .text {
+        font-size: 5px;
+    }
+
+    .date {
+        font-size: 12px;
+    }
+}
